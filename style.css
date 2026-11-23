@@ -1,0 +1,265 @@
+
+:root {
+  --rouge: #e84855;
+  --rouge-fonce: #c9283b;
+  --marine: #1a1f3a;
+  --texte: #2d3748;
+  --bordure: #dfe3ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 12px 48px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  color: var(--texte);
+  background: var(--marine);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+.header {
+  padding: 36px 20px 28px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--rouge), var(--rouge-fonce));
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.92;
+}
+
+.content {
+  padding: 30px 32px 40px;
+}
+
+.intro {
+  margin: 0 0 24px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #7a5b00;
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  border-radius: 8px;
+}
+
+
+.card {
+  margin-bottom: 24px;
+  padding: 22px 24px;
+  background: #fff;
+  border-left: 4px solid var(--rouge);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 18px;
+  font-size: 18px;
+  color: #1a202c;
+}
+
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row .field {
+  flex: 1;
+  min-width: 0;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  font: inherit;
+  color: var(--texte);
+  background: #fff;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--rouge);
+  outline-offset: 1px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select[multiple] {
+  padding: 8px;
+}
+
+
+fieldset {
+  margin: 0 0 18px;
+  padding: 10px 16px 16px;
+  border: 1px solid var(--bordure);
+  border-radius: 12px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 700;
+  color: var(--rouge);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 11px 12px;
+  font-weight: 400;
+  background: #f8f9fb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option input {
+  accent-color: var(--rouge);
+  width: 18px;
+  height: 18px;
+  margin: 0 4px 0 0;
+}
+
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.range-row input[type="range"] {
+  flex: 1;
+  accent-color: var(--rouge);
+}
+
+.range-row output {
+  min-width: 54px;
+  padding: 6px 0;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background: var(--rouge);
+  border-radius: 20px;
+}
+
+input[type="color"] {
+  width: 90px;
+  height: 44px;
+  padding: 4px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+}
+
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font: inherit;
+  background: #fafbfc;
+  border: 2px dashed var(--bordure);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  border-color: var(--rouge);
+}
+
+.note {
+  margin: 0;
+  font-size: 12px;
+  color: #718096;
+}
+
+
+.submit-zone {
+  text-align: center;
+}
+
+button[type="submit"] {
+  padding: 16px 44px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--rouge), var(--rouge-fonce));
+  border: 0;
+  border-radius: 40px;
+  box-shadow: 0 8px 20px rgba(232, 72, 85, 0.4);
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 10px 26px rgba(232, 72, 85, 0.55);
+}
+
+button[type="submit"]:focus-visible {
+  outline: 3px solid var(--marine);
+  outline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .content {
+    padding: 20px 14px 30px;
+  }
+}
